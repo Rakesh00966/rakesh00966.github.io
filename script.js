@@ -306,6 +306,76 @@ renderCategories();
 selectService(1, 4); // default: Mock-Test / Examination Platforms — ties directly to the featured project
 
 /* ============================================================
+   MOBILE SERVICE CATEGORY SCROLLER
+   A gentle auto-scroll makes the horizontal service list discoverable.
+   It pauses while the visitor interacts and resumes after a short delay.
+   ============================================================ */
+let explorerAutoScrollTimer = null;
+let explorerResumeTimer = null;
+let explorerDirection = 1;
+let explorerIsAutoScrolling = false;
+
+function isMobileExplorer() {
+  return window.matchMedia('(max-width: 980px)').matches;
+}
+
+function stopExplorerAutoScroll() {
+  if (explorerAutoScrollTimer) {
+    clearInterval(explorerAutoScrollTimer);
+    explorerAutoScrollTimer = null;
+  }
+  explorerIsAutoScrolling = false;
+}
+
+function startExplorerAutoScroll() {
+  stopExplorerAutoScroll();
+  if (!isMobileExplorer()) return;
+
+  explorerIsAutoScrolling = true;
+  explorerAutoScrollTimer = setInterval(() => {
+    if (!categoriesEl || categoriesEl.scrollWidth <= categoriesEl.clientWidth) return;
+
+    const maxScroll = categoriesEl.scrollWidth - categoriesEl.clientWidth;
+    const next = categoriesEl.scrollLeft + explorerDirection * 0.45;
+
+    if (next >= maxScroll) {
+      explorerDirection = -1;
+    } else if (next <= 0) {
+      explorerDirection = 1;
+    } else {
+      categoriesEl.scrollLeft = next;
+    }
+  }, 40);
+}
+
+function pauseExplorerAutoScroll() {
+  stopExplorerAutoScroll();
+  clearTimeout(explorerResumeTimer);
+  explorerResumeTimer = setTimeout(startExplorerAutoScroll, 2200);
+}
+
+['touchstart', 'pointerdown', 'wheel'].forEach(eventName => {
+  categoriesEl.addEventListener(eventName, pauseExplorerAutoScroll, { passive: true });
+});
+
+categoriesEl.addEventListener('scroll', () => {
+  if (isMobileExplorer() && !explorerIsAutoScrolling) pauseExplorerAutoScroll();
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  clearTimeout(explorerResumeTimer);
+  stopExplorerAutoScroll();
+  if (isMobileExplorer()) {
+    categoriesEl.scrollLeft = Math.max(0, Math.min(categoriesEl.scrollLeft, categoriesEl.scrollWidth - categoriesEl.clientWidth));
+    setTimeout(startExplorerAutoScroll, 900);
+  }
+});
+
+if (isMobileExplorer()) {
+  setTimeout(startExplorerAutoScroll, 1400);
+}
+
+/* ============================================================
    TELL ME WHAT YOU NEED — configurator
    ============================================================ */
 const TYPE_OPTIONS = [

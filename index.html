@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rakesh Kuntigorla | Freelance Full-Stack Web Developer</title>
+<meta name="description" content="Freelance full-stack web developer building affordable custom websites and web applications for businesses, institutions and individuals.">
+
+<meta property="og:title" content="Rakesh Kuntigorla | Freelance Full-Stack Web Developer">
+<meta property="og:description" content="Freelance full-stack web developer building affordable custom websites and web applications for businesses, institutions and individuals.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/profile-photo.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="nav-logo">Rakesh<span>.</span>dev</a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#configurator">Build Your Solution</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn--primary btn--sm" style="display:none" id="nav-cta-desktop">Let's Talk</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile-panel" id="nav-mobile-panel">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#configurator">Build Your Solution</a>
+    <a href="#projects">Projects</a>
+    <a href="#process">Process</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-badge hero-fade"><span class="dot"></span>Available for Remote Projects</span>
+      <h1 class="hero-title hero-fade">Freelance Full-Stack<br><span class="line2">Web Developer</span></h1>
+      <p class="hero-desc hero-fade">Hi, I'm Rakesh Kuntigorla, a freelance full-stack web developer focused on building modern, responsive and affordable websites and web applications. I help businesses, institutions and individuals turn ideas and manual processes into practical digital solutions.</p>
+      <div class="hero-actions hero-fade">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#configurator" class="btn btn--ghost">Let's Build Something</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <div class="hero-photo-accent"></div>
+        <img src="assets/Rakesh prof image.jpg" alt="Portrait of Rakesh Kuntigorla">
+        <div class="hero-photo-tag">Rakesh Kuntigorla · Full-Stack Developer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRAND STATEMENT ============ -->
+<section class="statement">
+  <div class="wrap">
+    <p>Your idea. <span class="accent-word">My development.</span> A working solution.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT CAN I BUILD (interactive) ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">01 — Services</span>
+      <h2 class="section-title">What Can I Build?</h2>
+      <p class="section-sub">Pick something from the list — I'll show you what's actually involved: what the client sees, what you manage, and what's optional.</p>
+    </div>
+
+    <div class="explorer reveal">
+      <div class="explorer-categories" id="explorer-categories" role="tablist" aria-label="Service categories">
+        <!-- populated by JS -->
+      </div>
+      <div class="explorer-panel" id="explorer-panel">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONFIGURATOR ============ -->
+<section class="section" id="configurator">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">02 — Requirement Builder</span>
+      <h2 class="section-title">Tell Me What You Need</h2>
+      <p class="section-sub">Choose the type of solution and features you need. I'll turn your requirements into a practical web solution.</p>
+    </div>
+
+    <div class="configurator reveal">
+      <div class="configurator-steps">
+        <div class="configurator-step-label is-active" data-step-label="1"><span class="num">1</span>What you need</div>
+        <div class="configurator-step-label" data-step-label="2"><span class="num">2</span>Features</div>
+        <div class="configurator-step-label" data-step-label="3"><span class="num">3</span>Summary</div>
+      </div>
+
+      <div class="configurator-block">
+        <h4>What do you need?</h4>
+        <p class="configurator-block-sub">Select one.</p>
+        <div class="chip-grid" id="type-chips"></div>
+      </div>
+
+      <div class="configurator-divider"></div>
+
+      <div class="configurator-block">
+        <h4>What features do you need?</h4>
+        <p class="configurator-block-sub">Select as many as apply.</p>
+        <div class="chip-grid" id="feature-chips"></div>
+      </div>
+
+      <div class="configurator-divider"></div>
+
+      <div class="summary-card">
+        <span class="summary-eyebrow">YOUR PROJECT</span>
+        <div id="summary-body">
+          <p class="summary-empty">Choose a project type above to see a live summary here.</p>
+        </div>
+        <div class="summary-actions">
+          <a href="#" id="whatsapp-cta" class="btn btn--primary" target="_blank" rel="noopener">Let's Discuss Your Project</a>
+          <a href="#" id="email-cta" class="btn btn--ghost">Email Instead</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">03 — Featured Work</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">A sample of what I've built so far — including a complete full-stack application.</p>
+    </div>
+
+    <div class="project-hero reveal">
+      <div class="project-hero-body">
+        <span class="project-tag">Primary Project · Full-Stack Web Application</span>
+        <h3>TS SI/PC Mock Test Platform</h3>
+        <p class="desc">A complete browser-based mock test platform designed for competitive examination practice, with a CBT-style candidate interface and administration system.</p>
+        <div class="badge-row">
+          <span class="badge">Live Timer</span>
+          <span class="badge">Question Palette</span>
+          <span class="badge">Mark for Review</span>
+          <span class="badge">Negative Marking</span>
+          <span class="badge">Auto Scoring</span>
+          <span class="badge">Rankings &amp; Percentile</span>
+          <span class="badge">Admin Dashboard</span>
+          <span class="badge">Excel Reports</span>
+          <span class="badge">PostgreSQL</span>
+        </div>
+        <div class="project-hero-actions">
+          <a href="https://tsipc-mocktest.onrender.com/test/demo-5PwZJ" target="_blank" rel="noopener" class="btn btn--primary">Try Live Demo</a>
+          <a href="https://github.com/Rakesh00966" target="_blank" rel="noopener" class="btn btn--ghost">View Project</a>
+        </div>
+        <p class="demo-note">Demo is hosted on a free backend service — it may take a few seconds to wake up on first load.</p>
+      </div>
+      <div class="project-mock">
+        <div class="browser-mock">
+          <div class="browser-bar">
+            <span></span><span></span><span></span>
+            <span class="url">tsipc-mocktest.onrender.com</span>
+          </div>
+          <div class="browser-body">
+            <div class="mock-timer"><span class="t">00:18:42</span><span class="q">Question 14 / 60</span></div>
+            <div class="mock-grid">
+              <div class="done"></div><div class="done"></div><div class="done"></div><div class="done"></div><div class="current"></div><div></div>
+              <div class="done"></div><div class="done"></div><div class="done"></div><div></div><div></div><div></div>
+            </div>
+            <div class="mock-bars"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="project-card">
+        <h4>Student Management System</h4>
+        <p class="desc">A web-based student management application built to handle student records, academic data and administrative workflows for an educational institution.</p>
+        <div class="badge-row"><span class="badge">Django</span><span class="badge">Python</span><span class="badge">SQL</span></div>
+        <p style="color:var(--text-tertiary); font-size:13px;">Built with Django · project information available on request</p>
+      </div>
+      <div class="project-card">
+        <h4>CAPTCHA Recognition System</h4>
+        <p class="desc">An image CAPTCHA recognition project using Convolutional Neural Networks (CNN), built as a case study in applied machine learning.</p>
+        <span class="stat">94.67% accuracy</span>
+        <p style="color:var(--text-tertiary); font-size:13px;">Presented as a project case study</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI-ASSISTED DEVELOPMENT ============ -->
+<section class="section" id="ai-assisted">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">04 — Workflow</span>
+      <h2 class="section-title">AI-Assisted Development</h2>
+      <p class="section-sub">I use modern AI development tools to accelerate coding, prototyping, problem-solving and development workflows, allowing me to deliver customized solutions faster while maintaining focus on requirements, testing, usability and deployment.</p>
+    </div>
+
+    <div class="workflow reveal">
+      <div class="workflow-step"><span class="workflow-step-label">Client Requirement</span></div>
+      <div class="workflow-step"><span class="workflow-step-label">Planning</span></div>
+      <div class="workflow-step is-ai"><span class="workflow-step-label">AI-Assisted Development</span></div>
+      <div class="workflow-step"><span class="workflow-step-label">Customization</span></div>
+      <div class="workflow-step"><span class="workflow-step-label">Testing</span></div>
+      <div class="workflow-step"><span class="workflow-step-label">Deployment</span></div>
+    </div>
+    <p class="ai-copy reveal">AI is a development accelerator, not a replacement for judgment. I still own the requirements, the architecture decisions, the customization and the testing — AI tools just help me get there faster.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">05 — Process</span>
+      <h2 class="section-title">How I Build Your Project</h2>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-item"><span class="process-num">01</span><div><h4>Understand Your Requirement</h4><p>We talk through what you actually need — the problem first, not the tech.</p></div></div>
+      <div class="process-item"><span class="process-num">02</span><div><h4>Plan the Solution</h4><p>I map out pages, features and data so there are no surprises later.</p></div></div>
+      <div class="process-item"><span class="process-num">03</span><div><h4>Design &amp; Develop</h4><p>Interface and functionality are built around your content and workflow.</p></div></div>
+      <div class="process-item"><span class="process-num">04</span><div><h4>AI-Assisted Implementation</h4><p>AI tools speed up the coding so more time goes into getting the details right.</p></div></div>
+      <div class="process-item"><span class="process-num">05</span><div><h4>Test &amp; Refine</h4><p>Functionality, responsiveness and edge cases get checked before you see it.</p></div></div>
+      <div class="process-item"><span class="process-num">06</span><div><h4>Deploy</h4><p>Your site or application goes live, configured and ready to use.</p></div></div>
+      <div class="process-item"><span class="process-num">07</span><div><h4>Support</h4><p>I stay reachable after launch for fixes and small adjustments.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">06 — Pricing</span>
+      <h2 class="section-title">Affordable Custom Development</h2>
+      <p class="section-sub">Professional solutions without unnecessary costs. Packages below are starting prices for small businesses and first-time clients.</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <span class="price-card-label">Starter Website</span>
+        <div class="price-card-amount"><span class="from">Starting from</span>₹2,999</div>
+        <ul>
+          <li>Landing pages</li>
+          <li>Personal portfolios</li>
+          <li>Small business websites</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <span class="price-card-label">Business Website</span>
+        <div class="price-card-amount"><span class="from">Starting from</span>₹7,999</div>
+        <ul>
+          <li>Business &amp; institution websites</li>
+          <li>Multiple pages</li>
+          <li>Contact / enquiry features</li>
+          <li>Responsive design</li>
+        </ul>
+      </div>
+      <div class="price-card is-featured">
+        <span class="price-card-label">Custom Web Application</span>
+        <div class="price-card-amount"><span class="from">Starting from</span>₹12,999</div>
+        <ul>
+          <li>Admin dashboards</li>
+          <li>Management systems</li>
+          <li>Booking systems</li>
+          <li>Database-backed applications</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <span class="price-card-label">Advanced Application</span>
+        <div class="price-card-amount"><span class="from">Starting from</span>₹19,999</div>
+        <ul>
+          <li>Complex business systems</li>
+          <li>Multiple user roles</li>
+          <li>Reports &amp; custom workflows</li>
+          <li>Larger database applications</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pricing-note reveal">Prices shown are starting-from prices, not fixed final quotes. Final pricing depends on features, complexity and customization.</p>
+    <div class="pricing-cta reveal"><a href="#contact" class="btn btn--primary">Get a Free Requirement Discussion</a></div>
+  </div>
+</section>
+
+<!-- ============ WHY WORK WITH ME ============ -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">07 — Why Work With Me</span>
+      <h2 class="section-title">A direct line to the person building it</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item"><h4>Custom Solutions</h4><p>Built around your actual requirements.</p></div>
+      <div class="why-item"><h4>Affordable</h4><p>Practical solutions without unnecessary costs.</p></div>
+      <div class="why-item"><h4>AI-Assisted Development</h4><p>Modern tools help accelerate development.</p></div>
+      <div class="why-item"><h4>Responsive</h4><p>Designed for phones, tablets and desktops.</p></div>
+      <div class="why-item"><h4>End-to-End</h4><p>From requirements and development to testing and deployment.</p></div>
+      <div class="why-item"><h4>Direct Communication</h4><p>Work directly with the developer.</p></div>
+      <div class="why-item"><h4>Remote</h4><p>Available for projects anywhere.</p></div>
+      <div class="why-item"><h4>Practical Focus</h4><p>Software that solves the actual problem, not extra complexity.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH ============ -->
+<section class="section" id="tech">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">08 — Technology</span>
+      <h2 class="section-title">Technologies I Work With</h2>
+      <p class="section-sub">Technology is selected according to the project's requirements, not forced into one stack.</p>
+    </div>
+    <div class="tech-grid reveal">
+      <div>
+        <div class="tech-group-title">Frontend</div>
+        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div>
+      </div>
+      <div>
+        <div class="tech-group-title">Backend</div>
+        <div class="tech-tags"><span>Python</span><span>Django</span><span>Node.js</span><span>Express.js</span></div>
+      </div>
+      <div>
+        <div class="tech-group-title">Database</div>
+        <div class="tech-tags"><span>PostgreSQL</span><span>MySQL</span><span>SQL</span></div>
+      </div>
+      <div>
+        <div class="tech-group-title">Tools</div>
+        <div class="tech-tags"><span>Git</span><span>GitHub</span><span>VS Code</span></div>
+      </div>
+      <div>
+        <div class="tech-group-title">AI-Assisted Development</div>
+        <div class="tech-tags"><span>ChatGPT</span><span>Claude</span><span>AI-assisted workflows</span></div>
+      </div>
+    </div>
+    <p class="tech-disclaimer reveal">These are technologies I work with depending on project requirements — not a claim of expert-level mastery in every one of them.</p>
+  </div>
+</section>
+
+<!-- ============ WHO I WORK WITH ============ -->
+<section class="section" id="who">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-kicker">09 — Who I Work With</span>
+      <h2 class="section-title">Built for people who need something practical</h2>
+    </div>
+    <div class="who-tags reveal">
+      <span>Small Businesses</span><span>Startups</span><span>Schools &amp; Colleges</span><span>Coaching Institutes</span><span>Individual Professionals</span><span>Local Businesses</span><span>Online Educators</span><span>Organizations</span><span>Entrepreneurs</span>
+    </div>
+    <p class="who-message reveal">Have a business process that's still being managed manually? Let's turn it into a practical digital solution.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="section-kicker">10 — About</span>
+      <h2 class="section-title" style="margin-bottom:20px;">About Rakesh</h2>
+      <p>I'm Rakesh Kuntigorla, a freelance full-stack web developer focused on creating practical digital solutions for businesses, institutions and individuals.</p>
+      <p>I combine web development technologies with AI-assisted workflows to build and deliver customized websites and applications efficiently — with a focus on requirements, testing, usability and deployment.</p>
+    </div>
+    <ul class="about-points reveal">
+      <li>Freelance developer, working remotely with clients anywhere</li>
+      <li>Custom solutions built around the actual requirement, not a template</li>
+      <li>Affordable development for small businesses and first-time clients</li>
+      <li>AI-assisted development used to accelerate delivery</li>
+      <li>Open to short projects and ongoing work alike</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Have a Project in Mind?</h2>
+    <p class="sub reveal">Tell me what you need. I'll help you understand what can be built, the suitable approach, estimated cost and timeline.</p>
+    <div class="contact-actions reveal">
+      <a href="https://wa.me/919666255226?text=Hi%20Rakesh%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="btn btn--primary">WhatsApp Me</a>
+      <a href="mailto:rakeshkuntigorla@gmail.com" class="btn btn--ghost">Send Email</a>
+    </div>
+    <div class="contact-links reveal">
+      <a href="https://www.linkedin.com/in/rakesh572/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Rakesh00966/" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:rakeshkuntigorla@gmail.com">rakeshkuntigorla@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer" style="border:none; padding:0;">
+    <span>© <span id="year"></span> Rakesh Kuntigorla. Built and deployed by hand.</span>
+    <span>Bengaluru → Anywhere, Remote</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919666255226?text=Hi%20Rakesh%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white"><path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23.1c-2 0-3.9-.5-5.5-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.2 10.2 0 0 1-1.6-5.5c0-5.7 4.6-10.3 10.3-10.3S26.3 10 26.3 15.7 21.7 26.1 16 26.1zm5.6-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6 0a8.3 8.3 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4a.6.6 0 0 0 0-.5c0-.2-.7-1.8-1-2.4s-.6-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7c0 1.6 1.2 3.1 1.3 3.3.2.2 2.4 3.7 5.9 5.1a20 20 0 0 0 2 .7 4.8 4.8 0 0 0 2.2.1c.7-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6s-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
